@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaCart | Modern E-Commerce</title>
+    <meta name="description" content="A modern front-end e-commerce website built with HTML, CSS, and JavaScript." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="#" class="brand">NovaCart</a>
+        <nav class="nav-links">
+          <a href="#featured">Featured</a>
+          <a href="#categories">Categories</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Open menu">☰</button>
+        <div class="cart-pill">
+          <span>Cart</span>
+          <span id="cart-count" class="cart-count">0</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">Fresh drops for every season</p>
+            <h1>Style smarter with curated essentials.</h1>
+            <p>
+              Discover premium apparel, gadgets, and home favorites crafted for
+              everyday comfort and modern living.
+            </p>
+            <div class="hero-actions">
+              <a href="#featured" class="btn btn-primary">Shop Now</a>
+              <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+            <ul class="hero-stats">
+              <li><strong>24h</strong><span>Fast dispatch</span></li>
+              <li><strong>4.9/5</strong><span>Rated by shoppers</span></li>
+              <li><strong>Free</strong><span>Returns</span></li>
+            </ul>
+          </div>
+          <div class="hero-card">
+            <img
+              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
+              alt="Featured fashion product"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="categories" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Browse by category</p>
+            <h2>Shop what fits your lifestyle</h2>
+          </div>
+          <div class="category-grid">
+            <article class="category-card">
+              <h3>Fashion</h3>
+              <p>Streetwear, office polish, and weekend favorites.</p>
+            </article>
+            <article class="category-card">
+              <h3>Tech</h3>
+              <p>Smart accessories that simplify your daily routine.</p>
+            </article>
+            <article class="category-card">
+              <h3>Home</h3>
+              <p>Elevate your space with functional, beautiful pieces.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="featured" class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Featured products</p>
+            <h2>Popular picks this week</h2>
+          </div>
+          <div class="filter-row">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="fashion">Fashion</button>
+            <button class="filter-btn" data-filter="tech">Tech</button>
+            <button class="filter-btn" data-filter="home">Home</button>
+          </div>
+          <div class="product-grid">
+            <article class="product-card" data-category="fashion">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" alt="Sneakers" />
+              <div class="product-info">
+                <h3>Urban Runner</h3>
+                <p>Comfort-first sneakers with a modern silhouette.</p>
+                <div class="product-meta">
+                  <span>$89</span>
+                  <button class="add-to-cart">Add to cart</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card" data-category="tech">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Wireless earbuds" />
+              <div class="product-info">
+                <h3>SoundWave Earbuds</h3>
+                <p>Immersive audio with a compact, travel-ready case.</p>
+                <div class="product-meta">
+                  <span>$129</span>
+                  <button class="add-to-cart">Add to cart</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card" data-category="home">
+              <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80" alt="Ceramic lamp" />
+              <div class="product-info">
+                <h3>Glow Lamp</h3>
+                <p>Soft ambient light that adds warmth to any room.</p>
+                <div class="product-meta">
+                  <span>$59</span>
+                  <button class="add-to-cart">Add to cart</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container about-grid">
+          <div>
+            <p class="eyebrow">Why NovaCart</p>
+            <h2>Designed for effortless shopping</h2>
+            <p>
+              We combine elegant design, quick delivery, and premium products so you can shop efficiently and confidently.
+            </p>
+          </div>
+          <div class="benefit-list">
+            <div>✓ Curated collections</div>
+            <div>✓ Secure checkout</div>
+            <div>✓ Responsive experience</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="footer">
+      <div class="container footer-wrap">
+        <div>
+          <h3>NovaCart</h3>
+          <p>Modern shopping, simplified.</p>
+        </div>
+        <form class="newsletter">
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Join</button>
+        </form>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
