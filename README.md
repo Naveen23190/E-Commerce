@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# E-Commerce
-=======
 # E-Cart India — full-stack shop
 
 A small India-focused full-stack storefront built with Spring Boot, PostgreSQL, Hibernate/JPA, Spring Security/JWT, and React/Vite. The storefront pairs a dark black-and-gold palette with restrained saffron, ivory, and green accents and Hindi greetings. Product prices are in Indian rupees (INR), order dates use the Indian locale, and checkout requests an Indian delivery address and six-digit PIN. It includes 60 uniquely named sample products with distinct Unsplash images, India-oriented descriptions and INR pricing, product search/category and price/rating/stock filtering, price sorting, locally saved favorites, customer registration and login, a stock-aware cart, product details and verified-purchase reviews, saved delivery addresses, order confirmation/history/tracking, inventory change history and low-stock alerts, and role-protected product and fulfillment management. Checkout adds a server-calculated flat ₹99 delivery fee; product prices remain GST-inclusive and no separate GST rate or breakdown is invented. Payment options are COD or UPI/card via Razorpay test mode; online checkout requires test credentials and cannot process live charges. Email confirmations are demo-mode logs only, with no actual email sent. PIN validation checks format only and does not verify serviceability. Interface animations respect reduced-motion preferences. Product photos, Razorpay Checkout, and the optional Devanagari font require an internet connection.
@@ -91,4 +88,3 @@ Send the login/register token as `Authorization: Bearer <token>`. Registration a
 ## Checks
 
 Run backend tests with `mvn test` and build the frontend with `npm run build`. A database is not required for those checks. Flyway applies versioned migrations at application startup; back up existing data before starting the upgraded app. No database connection or seeding operation is performed by the build checks.
->>>>>>> fcdafd2 (Prepare E-Cart For Deployment)
