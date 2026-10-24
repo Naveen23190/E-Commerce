@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: e-cart-api
+    name: e-cart-api-cvb9
     runtime: docker
     region: oregon
     plan: free
@@ -12,44 +12,42 @@ services:
         value: "8080"
       - key: DB_HOST
         fromDatabase:
-          name: e-cart-db
+          name: e-cart-db-cvb9
           property: host
       - key: DB_PORT
         fromDatabase:
-          name: e-cart-db
+          name: e-cart-db-cvb9
           property: port
       - key: DB_NAME
-        fromDatabase:
-          name: e-cart-db
-          property: databaseName
+        value: ecart
       - key: DB_USERNAME
         fromDatabase:
-          name: e-cart-db
+          name: e-cart-db-cvb9
           property: user
       - key: DB_PASSWORD
         fromDatabase:
-          name: e-cart-db
+          name: e-cart-db-cvb9
           property: password
       - key: JWT_SECRET
         generateValue: true
       - key: CORS_ALLOWED_ORIGIN
-        value: https://e-cart-storefront.onrender.com
+        value: https://e-cart-storefront-cvb9.onrender.com
 
   - type: web
-    name: e-cart-storefront
+    name: e-cart-storefront-cvb9
     runtime: static
     buildCommand: npm ci && npm run build
     staticPublishPath: ./dist
     envVars:
       - key: VITE_API_URL
-        value: https://e-cart-api.onrender.com/api
+        value: https://e-cart-api-cvb9.onrender.com/api
     routes:
       - type: rewrite
         source: /*
         destination: /index.html
 
 databases:
-  - name: e-cart-db
+  - name: e-cart-db-cvb9
     databaseName: ecart
     user: ecart
     region: oregon
