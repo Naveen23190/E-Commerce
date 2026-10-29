@@ -513,7 +513,7 @@ function App() {
           {product.stock > 0 && product.stock <= 5 && <p className="stock-note">Only {product.stock} left</p>}
         </article>)}</div>
         <PaginationControls pageInfo={productPageInfo} onPageChange={setProductPage} label="Products" />
-        {!visibleProducts.length && <div className="empty-state"><span>◌</span><h3>{showFavorites ? 'No saved pieces yet.' : 'Nothing here just yet.'}</h3><p>{showFavorites ? 'Tap the heart on a product to save it for later.' : 'Try another search or browse the full collection.'}</p><button onClick={() => { setProductPage(0); setQuery(''); setCategory('All'); setShowFavorites(false); }}>Show everything</button></div>}
+        {!visibleProducts.length && <div className="empty-state"><span>◌</span><h3>{showFavorites ? 'No saved pieces yet.' : 'Nothing here just yet.'}</h3><p>{showFavorites ? 'Tap the heart on a product to save it for later.' : 'Wait For The API To Respond....'}</p><button onClick={() => { setProductPage(0); setQuery(''); setCategory('All'); setShowFavorites(false); }}>Show everything</button></div>}
       </main>
       <section className="quote-banner"><span>✳</span><p>A home is made in the little moments.<br /><em>Make room for more of them.</em></p><small>THOUGHTFULLY CHOSEN FOR YOUR EVERYDAY</small></section>
     </>}
